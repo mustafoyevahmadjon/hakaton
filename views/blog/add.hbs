@@ -1,0 +1,29 @@
+<script src="https://cdn.ckeditor.com/4.16.1/standard/ckeditor.js"></script>
+<div class="container mtt mt-5">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="card p-4 mb-5">
+                <form action="/blog/add" method="POST" enctype="multipart/form-data">
+                    <div class="mb-3">
+                        <label for="title" class="form-label">E'lon sarlavhasi</label>
+                        <input type="text" class="form-control" placeholder="Noutbuk Acer" id="title" name="title">
+                    </div>
+                    <div class="mb-3">
+                        <label for="image" class="form-label">Rasm tanlang</label>
+                        <input class="form-control" type="file" id="image" name="image">
+                    </div>
+                    <div class="mb-3">
+                        <label for="description" class="form-label">Tarif</label>
+                        <textarea name="description" id="description"></textarea>
+                        <script>
+                            CKEDITOR.replace('description');
+                        </script>
+                    </div>
+                    <div class="d-grid gap-2">
+                        <button type="submit" class="btn btn-primary">Kiritish</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
